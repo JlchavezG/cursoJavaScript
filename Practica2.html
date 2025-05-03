@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segunda práctica del curso Javascript desde cero</title>
+</head>
+<body>
+    <h1>Explorando JavaScript</h1>
+    <p id="resultado"></p>
+
+    <script>
+        // Variables
+        const nombre = "Luis";
+        let edad = 40;
+        let saludando = "Hola buenas tardes"; // corregido (de 'Saludando')
+
+        // Datos primitivos
+        let verdadero = true;
+        let numero = 100.5;
+        let nada = null;
+        let sinValor;
+
+        // Datos complejos
+        const persona = {
+            nombre: "Luis",
+            edad: 40,
+        };
+
+        const personas = ["Luis", "Ana", "Ramon"];
+        const colores = ["Negro", "Rojo", "Azul"];
+
+        function saludar(nombre) {
+            return `Hola ${nombre}, Bienvenido a JavaScript`;
+        }
+
+        // Tipado dinámico
+        let x = "5" * 2; // 10 (number)
+        let y = "5" + 2; // "52" (string)
+
+        // Verificación de tipos
+        console.log(typeof x); // number
+        console.log(typeof y); // string
+
+        // Conversión explícita
+        const n1 = Number("20");
+        const b1 = Boolean(""); // false
+        const c1 = String(123); // "123"
+
+        // Operadores aritméticos
+        let total = 5 + 3 * 2; // 11
+        total += 10; // 21
+        const potencia = 2 ** 3; // 8
+
+        // Variables para mostrar
+        let activo = true;
+        let puntos = 100.5;
+
+        // Mostrar Resultados
+        document.getElementById("resultado").innerHTML = `
+            ${saludando}. ${nombre}.<br>
+            Edad: ${edad}<br>
+            ¿Activo? ${activo} <br>
+            Puntos: ${puntos}<br>
+            Color Favorito: ${colores[2]}<br>
+            Saludo: ${saludar(nombre)}<br>
+            x = ${x}, tipo: ${typeof x}<br>
+            y = ${y}, tipo: ${typeof y}<br>
+            Conversión: n1 = ${n1}, b1 = ${b1}, c1 = ${c1}<br>
+            Total = ${total}, potencia = ${potencia}
+        `;
+    </script>
+</body>
+</html>
